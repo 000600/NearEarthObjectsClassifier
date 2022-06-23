@@ -17,6 +17,7 @@ The dataset can be found at this link: https://www.kaggle.com/datasets/sameepvan
 - Maximum estimated diameter
 - Relative velocity
 - Absolute magnitude
+Note that the initial dataset is biased; it contains 90.3% repressentation of non-hazardous objects and only 9.7% representation of hazardous objects (this statistic can be found on the data's webpage). This issue is solved within the file using SMOTE, which oversamples the minority class within the dataset.
 
 ## Libraries
 This neural network was created with the help of the Tensorflow and Scikit-Learn libraries.
