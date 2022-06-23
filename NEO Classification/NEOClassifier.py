@@ -31,6 +31,10 @@ for row in range(df.shape[0]):
     rows.append(df.iloc[row][point])
   x.append(rows)
   y.append(df.loc[row][-1])
+  
+# Balance dataset (make sure there are an even representation of instances with label 1 and label 0)
+smote = SMOTE()
+x, y = smote.fit_resample(x, y)
 
 # Divide the x and y values into three sets: train, test, and validation
 x_train, x_test, y_train, y_test = train_test_split(x, y, random_state = 1)
@@ -72,7 +76,7 @@ history = model.fit(x_train, y_train, epochs = epochs, validation_data = (x_val,
 history_dict = history.history
 loss = history_dict['loss']
 val_loss = history_dict['val_loss']
-epoch_list = [i for i in range(len(epochs))]
+epoch_list = [i for i in range(epochs)]
 
 plt.plot(epoch_list, loss, label = 'Loss')
 plt.plot(epoch_list, val_loss, label = 'Validation Loss')
@@ -96,7 +100,7 @@ plt.show()
 
 # Prediction vs. actual value (change the index to view a different input and output set)
 index = 0
-prediction = np.argmax(model.predict([x_test[index]])) # Model predicts a 1 if the asteroid is classified as hazardous or 0 if the asteroid is not classified as hazardous
+prediction = np.argmax(model.predict([x_test[index]]))
 print(f"\nModel's Prediction on a Sample Input: {prediction}")
 print(f"Actual Label on the Same Input: {y_test[index]}")
 
@@ -106,5 +110,5 @@ print(f'\nTest accuracy: {test_acc * 100}%')
 
 # View performance metrics
 predict = model.predict(x_test)
-predictions = [1.0 if j > 0.5 else 0 for j in predict] # Adjust network predictions for classification report
+predictions = [1.0 if j > 0.5 else 0 for j in predict] # Adjust values for classification report
 print("\n", classification_report(y_test, predictions))
