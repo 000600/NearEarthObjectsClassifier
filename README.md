@@ -2,7 +2,7 @@
 
 ## The Neural Network
 
-This network predicts whether or not an asteroid or object in space near to earth (an NEO) is hazardous. The model will predict a value close to 0 if the asteroid is safe and a 1 if the asteroid is considered to be dangerous. Since the model only predicts binary categorical values, the model uses a binary crossentropy loss function and has 1 output neuron. The model uses a standard Adam optimizer with a learning rate of 0.001 and multiple dropout layers to prevent overfitting. The model contains an architecture consisting of:
+This network predicts whether or not an asteroid or object in space near to earth (an NEO) is hazardous. The model will predict a value close to 0 if the asteroid is predicted to be safe and a 1 if the asteroid is predicted to be dangerous. Since the model only predicts binary categorical values, the model uses a binary crossentropy loss function and has 1 output neuron. The model uses a standard Adam optimizer with a learning rate of 0.001 and multiple dropout layers to prevent overfitting. The model contains an architecture consisting of:
 - 1 Batch Normalization layer
 - 1 Input layer (with 32 input neurons and a ReLU activation function)
 - 2 Hidden layers (each with 32 neurons and a ReLU activation function)
