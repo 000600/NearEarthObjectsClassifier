@@ -12,6 +12,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+from imblearn.over_sampling import SMOTE
 
 # Load dataset
 df = pd.read_csv('NEOData.csv')
