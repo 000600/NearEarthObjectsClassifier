@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
-# Get dataset
-df = pd.read_csv('neo.csv')
+# Load dataset
+df = pd.read_csv('NEOData.csv')
 df = pd.DataFrame(df)
 
 df = df.drop(labels = ["id", "name", "orbiting_body", "sentry_object"], axis = 1) # Remove these columns from the dataset since they don't help the model learn better
