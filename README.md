@@ -21,7 +21,7 @@ The dataset can be found at this link: https://www.kaggle.com/datasets/sameepvan
 Note that the initial dataset is biased (this statistic can be found on the data's webpage); it contains 90.3% repressentation of non-hazardous objects (encoded as 0's in this model) and only 9.7% representation of hazardous objects (encoded as 1's in this model). This issue is solved within the classifier file using SMOTE, which oversamples the minority class within the dataset.
 
 ## Libraries
-This neural network was created with the help of the Tensorflow, Imbalanced-Learn and Scikit-Learn libraries.
+This neural network was created with the help of the Tensorflow, Imbalanced-Learn, and Scikit-Learn libraries.
 - Tensorflow's Website: https://www.tensorflow.org/
 - Tensorflow Installation Instructions: https://www.tensorflow.org/install
 - Scikit-Learn's Website: https://scikit-learn.org/stable/
