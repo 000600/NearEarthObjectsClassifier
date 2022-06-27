@@ -27,7 +27,7 @@ y = []
 # Add specific parts of the dataset to x and y lists
 for row in range(df.shape[0]):
   rows = []
-  for point in range(len(df.loc[0]) - 1): # "-1" because we don't want to add the last column (the labels) to the inputs section
+  for point in range(len(df.loc[0]) - 1): # "- 1" because we don't want to add the last column (the labels) to the inputs section
     rows.append(df.iloc[row][point])
   x.append(rows)
   y.append(df.loc[row][-1])
