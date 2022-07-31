@@ -12,13 +12,13 @@ This network predicts whether or not an asteroid or object in space near to eart
 Feel free to further tune the hyperparameters or build upon the model!
 
 ## The Dataset
-The dataset can be found at this link: https://www.kaggle.com/datasets/sameepvani/nasa-nearest-earth-objects. Credit for the dataset collection goes to **Sameep Vani**, **Shakir Ai**, **Chris X**, and others on *Kaggle* and at *NASA*. It describes the hazardousness (0 or 1) of an object in space based on multiple factors, inluding:
+The dataset can be found at this link: https://www.kaggle.com/datasets/sameepvani/nasa-nearest-earth-objects. Credit for the dataset collection goes to **Sameep Vani**, **Shakir Ai**, **Chris X**, and others on *Kaggle* and at *NASA*. It describes the hazardousness (0 or 1) of an object in space based on multiple factors, including:
 - Minimum estimated diameter
 - Maximum estimated diameter
 - Relative velocity
 - Absolute magnitude
 
-Note that the initial dataset is biased (this statistic can be found on the data's webpage); it contains 90.3% repressentation of non-hazardous objects (encoded as 0's in this model) and only 9.7% representation of hazardous objects (encoded as 1's in this model). This issue is solved within the classifier file using SMOTE, which oversamples the minority class within the dataset.
+Note that the initial dataset is biased (this statistic can be found on the data's webpage); it contains 90.3% representation of non-hazardous objects (encoded as 0's in this model) and only 9.7% representation of hazardous objects (encoded as 1's in this model). This issue is solved within the classifier file using SMOTE, which oversamples the minority class within the dataset.
 
 ## Libraries
 This neural network was created with the help of the Tensorflow, Imbalanced-Learn, and Scikit-Learn libraries.
