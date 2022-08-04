@@ -72,7 +72,7 @@ early_stopping = EarlyStopping(min_delta = 0.001, patience = 10, restore_best_we
 epochs = 20
 history = model.fit(x_train, y_train, epochs = epochs, validation_data = (x_val, y_val)) # To add callbacks add 'callbacks = [early_stopping]'
 
-# Visualize  loss and validation loss
+# Visualize loss and validation loss
 history_dict = history.history
 loss = history_dict['loss']
 val_loss = history_dict['val_loss']
