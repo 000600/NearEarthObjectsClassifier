@@ -11,7 +11,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
-from imblearn.over_sampling import SMOTE
 
 # Load dataset
 df = pd.read_csv('NEOData.csv')
